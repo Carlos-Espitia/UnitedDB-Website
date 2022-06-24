@@ -1,0 +1,49 @@
+@import "../../scss/Variables.module.scss";
+
+
+.about {
+
+    margin-top: 25vh;
+    h1 {
+        font-weight: 500;
+        color: white;
+        text-align: center;
+    }
+    
+    .wrapper { //added warpper to center grid container 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .cards {
+            display: inline-grid;
+            grid-template-columns: repeat(3, auto); /* num of grids */
+            grid-gap: 100px;
+            margin-top: 100px;
+            // margin-bottom: 150px;
+            filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.4));
+    
+            .card {
+                // display: block;
+                border-top: 5px solid $primaryColor;
+                padding-top: 30px;
+                padding-right: 34px;
+                padding-left: 34px;
+                padding-bottom: 43px;
+                background-color: $black1;
+                max-width: 400px;
+                h2 {
+                    color: $primaryColor;
+                    font-size: 40px;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                }
+                h3 {
+                    font-size: 25px;
+                    color: $accent;
+                    font-weight: 500;
+                }
+                // outline: 1px solid white;
+            }
+        }
+    }
+}

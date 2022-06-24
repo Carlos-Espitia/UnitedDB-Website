@@ -1,0 +1,15 @@
+$background: #1D1D1D;
+$primaryColor: #6AA1FF;
+$accent: #A2C5FF;
+$black1: #242424;
+$black2: #1A1A1A;
+$hover: #2D2D2D;
+
+:export {
+    background: $background;
+    primaryColor: $primaryColor;
+    accent: $accent;
+    black1: $black1;
+    black2: $black2;
+    hover: $hover;
+}

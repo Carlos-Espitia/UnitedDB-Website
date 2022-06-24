@@ -1,0 +1,92 @@
+@import "../../scss/Variables.module.scss";
+
+
+// position: relative;
+// bottom: -10px;
+
+//center text 
+$center-top: -0.35em;
+
+
+@mixin navButtonStyle() {
+    font-size: 19px;
+    font-weight: 500;
+    border-radius: 9px;
+    padding: 8px;
+    border: 3px solid $hover;
+}
+
+@mixin navButtonHover() {
+    transition: 0.3s;
+    background-color: $hover;
+}
+
+.nav {
+    display:inline-block;
+    z-index: 1;
+    position: fixed;
+    justify-content: space-around;
+    background-color: $black1;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    height: 75px;
+    width: 100%;
+    min-width: 1000px;
+    // outline: 1px solid white;
+
+    .logo{
+        position: relative;
+        bottom: -10px;
+        float: left;
+        margin-left: 1.5em;
+        margin-right: 45px; 
+        
+        .svg {
+            fill: $primaryColor;
+            font-size: 45px;
+            // border: 1px solid white;
+        }
+        .text{
+            position: relative;
+            color: white;
+            font-family: "Segoe UI";
+            font-weight: 500;
+            top: $center-top;
+            margin-left: 0.3em;
+            font-size: 30px;
+            // border: 1px solid white;
+        }
+    }
+
+        
+    .buttons {
+        position: relative;
+        display: block;
+        bottom: -15px;
+        .button {
+            display: inline-block;
+            margin-right: 35px;
+            @include navButtonStyle();
+            // border: 1px solid white;
+            a {
+                color: $primaryColor;
+            }
+        }
+        .discordButton {
+            float: right;
+            margin-right: 40px;
+            @include navButtonStyle();
+            // border: 1px solid white;
+            a {
+                color: $primaryColor;
+            }
+        }
+
+        .button:hover {
+            @include navButtonHover();
+        }
+        .discordButton:hover {
+            @include navButtonHover();
+        }
+        // border: 1px solid white;
+    }
+}

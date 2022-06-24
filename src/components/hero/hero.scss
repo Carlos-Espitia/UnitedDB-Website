@@ -1,0 +1,131 @@
+@import "../../scss/Variables.module.scss";
+
+@mixin btnStyles() {
+    position: relative;
+    display: inline-block;
+    margin-right: 55px;
+    font-size: 35px;
+    font-weight: 500;
+    border-radius: 9px;
+    padding: 12px;
+    border: 3px solid $hover;
+    a {
+        color: white;
+    }
+}
+
+$margin: 170px;
+
+
+.hero {
+    min-width: 2500px;
+    
+    .text {
+        // margin-top: 275px;
+        margin-top: 26.5vh;
+
+        margin-left: 150px;
+        display: inline-block;
+        h1 {
+            font-size: 60px;
+            color: $primaryColor;
+            font-weight: 600;
+            // white-space:inherit;
+            // border: 1px solid white;
+        }
+        h2 {
+            margin-top: 14px;
+            font-size: 40px;
+            width: 600px;
+            color: white;
+            font-weight: 600;
+            // border: 1px solid white;
+        }
+        h3 {
+            margin-top: 12px;
+            font-size: 25px;
+            font-weight: 600;
+            color: #8B8B8B;
+            width: 500px;
+            // border: 1px solid white;
+        }
+    
+        .btns {
+            margin-top: 38px;
+            .downloadBtn {
+                @include btnStyles();
+                background-color: $primaryColor;
+            }
+            
+            .docBtn {
+                @include btnStyles();
+                background-color: $black1;
+            }  
+        }
+        // outline: 1px solid white;
+    }
+
+    .svg {
+        display: inline-block;
+        position: relative;
+        top: -10px;
+        margin-left: $margin;
+        font-size: 450px;
+        line-height: 0%; //removes passing from icon
+        // outline: 1px solid white;
+    }
+
+    .modText {
+        display: inline-block;
+        position: relative;
+        left: -405px;
+        bottom: -65px;
+        font-size: 45px;
+        color: $primaryColor;
+        font-weight: 600;
+        // outline: 1px solid white;
+    }
+    .modCount {
+        display: inline-block;
+        position: relative;
+        left: -590px;
+        bottom: -125px;
+        font-size: 45px;
+        color: $primaryColor;
+        font-weight: 600;
+        // outline: 1px solid white;
+    }
+
+    .svg2 {
+        display: inline-block;
+        position: relative;
+        top: -10px;
+        margin-left: $margin;
+        left: -410px;
+        font-size: 450px;
+        line-height: 0%; //removes passing from icon
+        // outline: 1px solid white;
+    }
+
+    .bpText {
+        display: inline-block;
+        position: relative;
+        right: -1575px;
+        top: -8px;
+        font-size: 45px;
+        color: $primaryColor;
+        font-weight: 600;
+        // outline: 1px solid white;
+    }
+    .bpCount {
+        display: inline-block;
+        position: relative;
+        right: -1335px;
+        bottom: -55px;
+        font-size: 45px;
+        color: $primaryColor;
+        font-weight: 600;
+        // outline: 1px solid white;
+    }
+    // outline: 1px solid white;
+}

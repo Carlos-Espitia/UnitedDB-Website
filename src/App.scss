@@ -1,0 +1,18 @@
+@import './scss/Variables.module.scss';
+
+
+* {
+  // overide default styles
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  // overide default styles
+  font-family: "Segoe UI";
+}
+
+body {
+  background-color: $background;
+  overflow-x: hidden; //remove side x scroll
+}
