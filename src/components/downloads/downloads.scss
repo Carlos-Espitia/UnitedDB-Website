@@ -1,59 +1,489 @@
 @import "../../scss/Variables.module.scss";
+@import '../../scss/breakpoints.scss';
 
 .downloads {
-    position: relative;
-    background-image: linear-gradient(to right top, #2D4263, #1A2436);
-    height: 960px;
-    margin-top: 150px;
     .invite {
-        position: absolute;
-        width: 50%;
-        height: 100%;
-        z-index: 10;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0); // center with absolute and relative
         text-align: center;
+        width: fit-content;
+        // outline: 1px solid white;  
         .text {
-            position: relative;
-            // left: 10%;
-            top: 13%; 
-            font-size: 60px;
             font-weight: 600;
             color: white
         }
+
         .svg {
-            position: relative;
-            // left: 35%;
-            bottom: -20%;
-            font-size: 300px;
             //outline: 1px solid white; //svg has extra space on top | couldn't figure out how to remove
             line-height: 0; //removes passing from icon
         }
         .btn {
-            left: 1.4rem;
-            bottom: -25%;
-
-            position: relative;
             display: inline-block;
-            margin-right: 55px;
-            font-size: 35px;
             font-weight: 500;
-            border-radius: 9px;
-            padding: 12px;
-            border: 3px solid $hover;
             background-color: $black1;
             a {
                 color: white;
             }
         }
-        // outline: 1px solid white;
-
     }
     .plugins {
-        position: absolute;
-        float: right;
+        text-align: center;
+        .text {
+            // outline: 1px solid white;  
+            font-weight: 600;
+            color: white
+        }
+        .berp {
+            .svg {
+                //outline: 1px solid white; e
+                line-height: 0; //removes passing from ico
+            }
+            .btn {
+                display: inline-block;
+                font-weight: 500;
+                background-color: $black1;
+                a {
+                    color: white;
+                }
+            }
+        }
+        .bdsx {
+
+            .svg {
+                //outline: 1px solid white; //svg has extra space on top | couldn't figure out how to remove
+                line-height: 0; //removes passing from ico
+            }
+            .btn {
+                display: inline-block;
+                font-weight: 500;
+                background-color: $black1;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+//         clip-path: polygon(23% 0, 100% 0, 100% 100%, 0% 100%);
+//         background-image: linear-gradient(to right top, #3D2B4D, #446546);
+
+@include biggest {
+    .downloads {    
+        position: relative;
+        background-image: linear-gradient(to top, #2D4263, #1A2436);
         height: 960px;
-        width: 63%;
-        right: 0%;
-        clip-path: polygon(23% 0, 100% 0, 100% 100%, 0% 100%);
-        background-image: linear-gradient(to right top, #3D2B4D, #446546);
+        margin-top: 30vw;
+        // outline: 1px solid white; 
+        .invite {
+            // outline: 1px solid red; 
+            position: absolute;
+            left: 11%;
+            transform: translate(-11%, 0);
+            top: 20%;
+            z-index: 1;
+            text-align: center;
+            .text {
+                // outline: 1px solid white;  
+                font-size: 2.8vw;
+            }
+            .svg {
+                margin-top: 2vw;
+                font-size: 14vw;
+            }
+            .btn {
+                margin-top: 2.5vw;
+                font-size: 2vw;
+                border-radius: 10px;
+                padding: 0.5vw;
+                border: 0.2vw solid $hover;
+            }
+        }
+        .plugins {
+            display: block;
+            position: relative;
+            float: right;
+            height: 960px;
+            width: 63%;
+            clip-path: polygon(23% 0, 100% 0, 100% 100%, 0% 100%);
+            background-image: linear-gradient(to right top, #3D2B4D, #446546);
+            .text {
+                position: relative;
+                margin-left: 10vw;
+                top: 20%;
+                // outline: 1px solid white;  
+                font-size: 2.6vw;
+            }
+            .berp {
+                position: relative;
+                top: 20%;
+                margin-left: 10vw;
+                display: inline-block;
+                .svg {
+                    margin-top: 2vw;
+                    font-size: 14vw;
+                    //outline: 1px solid white; //svg has extra space on top | couldn't figure out how to remove
+                }
+                .btn {
+                    margin-top: 2.5vw;
+                    font-size: 2vw;
+                    border-radius: 10px;
+                    padding: 0.5vw;
+                    border: 0.2vw solid $hover;
+                }
+            }
+            .bdsx {
+                position: relative;
+                top: 20%;
+                display: inline-block;
+                margin-left: 5vw;
+                .svg {
+                    margin-top: 2vw;
+                    font-size: 14vw;
+                }
+                .btn {
+                    margin-top: 2.5vw;
+                    font-size: 2vw;
+                    border-radius: 10px;
+                    padding: 0.5vw;
+                    border: 0.2vw solid $hover;
+                }
+            }
+        }
+    }
+}
+
+@include xl {
+    .downloads {    
+        background-image: linear-gradient(to top, #2D4263, #1A2436);
+        height: 70vw;
+        margin-top: 30vw;
+        // outline: 1px solid white; 
+        .invite {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top: 0;
+            text-align: center;
+            .text {
+                padding-top: 5vw;
+                top: 0;
+                // outline: 1px solid white;  
+                font-size: 4.5vw;
+            }
+            .svg {
+                margin-top: 3vw;
+                font-size: 17vw;
+            }
+            .btn {
+                margin-top: 3vw;
+                font-size: 3.5vw;
+                border-radius: 9px;
+                padding: 1vw;
+                border: 0.5vw solid $hover;
+            }
+        }
+        .plugins {
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin-top: 5vw;
+            height: 50vw;
+            width: 100%;
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+            background-image: linear-gradient(to bottom, #3D2B4D, #446546);
+            .text {
+                top: 0;
+                padding-top: 5vw;
+                margin-left: 0;
+                // outline: 1px solid white;  
+                font-size: 4.5vw;
+            }
+            .berp {
+                display: inline-block;
+                margin-left: 0;
+                top: 0;
+                margin-top: 4vw;
+                // outline: 1px solid white; //svg has extra space on top | couldn't figure out how to remove
+                .svg {
+                    font-size: 17vw;
+                    //outline: 1px solid white; //svg has extra space on top | couldn't figure out how to remove
+                }
+                .btn {
+                    margin-top: 4vw;
+                    font-size: 3.5vw;
+                    border-radius: 9px;
+                    padding: 1vw;
+                    border: 0.5vw solid $hover;
+                }
+            }
+            .bdsx {
+                display: inline-block;
+                margin-left: 10vw;
+                margin-top: 4vw;
+                top: 0;
+                .svg {
+                    font-size: 17vw;
+                }
+                .btn {
+                    margin-top: 4vw;
+                    font-size: 3.5vw;
+                    border-radius: 9px;
+                    padding: 1vw;
+                    border: 0.5vw solid $hover;
+                }
+            }
+        }
+    }
+}
+
+
+@include md {
+    .downloads {    
+        background-image: linear-gradient(to top, #2D4263, #1A2436);
+        height: 120vw;
+        margin-top: 30vw;
+        // outline: 1px solid white; 
+        .invite {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+            top: 0;
+            .text {
+                padding-top: 5vw;
+                // outline: 1px solid white;  
+                font-size: 6vw;
+            }
+            .svg {
+                margin-top: 3vw;
+                font-size: 25vw;
+            }
+            .btn {
+                margin-top: 3vw;
+                font-size: 5vw;
+                border-radius: 9px;
+                padding: 1.5vw;
+                border: 0.5vw solid $hover;
+            }
+        }
+        .plugins {
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin-top: 10vw;
+            height: 65vw;
+            width: 100%;
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+            background-image: linear-gradient(to bottom, #3D2B4D, #446546);
+            .text {
+                top: 0;
+                padding-top: 4vw;
+                // outline: 1px solid white;  
+                font-size: 6vw;
+                margin-left: 0;
+            }
+            .berp {
+                display: inline-block;
+                top: 0;
+                margin-left: 0;
+                .svg {
+                    margin-top: 4vw;
+                    font-size: 25vw;
+                    //outline: 1px solid white; //svg has extra space on top | couldn't figure out how to remove
+                }
+                .btn {
+                    margin-top: 4vw;
+                    font-size: 4.5vw;
+                    border-radius: 9px;
+                    padding: 1.5vw;
+                    border: 0.5vw solid $hover;
+                }
+            }
+            .bdsx {
+                display: inline-block;
+                margin-left: 10vw;
+                top: 0;
+                .svg {
+                    margin-top: 7vw;
+                    font-size: 25vw;
+                }
+                .btn {
+                    margin-top: 4vw;
+                    font-size: 4.5vw;
+                    border-radius: 9px;
+                    padding: 1.5vw;
+                    border: 0.5vw solid $hover;
+                }
+            }
+        }
+    }
+}
+
+@include xmd {
+    .downloads {    
+        background-image: linear-gradient(to top, #2D4263, #1A2436);
+        height: 150vw;
+        margin-top: 30vw;
+        // outline: 1px solid white; 
+        .invite {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top: 0;
+            text-align: center;
+            .text {
+                padding-top: 5vw;
+                // outline: 1px solid white;  
+                font-size: 6vw;
+            }
+            .svg {
+                margin-top: 3vw;
+                font-size: 25vw;
+            }
+            .btn {
+                margin-top: 3vw;
+                font-size: 5vw;
+                border-radius: 9px;
+                padding: 1.5vw;
+                border: 0.5vw solid $hover;
+            }
+        }
+        .plugins {
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin-top: 10vw;
+            height: 110vw;
+            width: 100%;
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+            background-image: linear-gradient(to bottom, #3D2B4D, #446546);
+            .text {
+                padding-top: 4vw;
+                // outline: 1px solid white;  
+                font-size: 6vw;
+                margin-left: 0;
+            }
+            .berp {
+                display: block;
+                top: 0;
+                margin-left: 0;
+                .svg {
+                    margin-top: 4vw;
+                    font-size: 25vw;
+                    //outline: 1px solid white; //svg has extra space on top | couldn't figure out how to remove
+                }
+                .btn {
+                    margin-top: 4vw;
+                    font-size: 4.5vw;
+                    border-radius: 9px;
+                    padding: 1.5vw;
+                    border: 0.5vw solid $hover;
+                }
+            }
+            .bdsx {
+                display: block;
+                margin-left: 0;
+                top: 0;
+                margin-left: 0;
+                .svg {
+                    margin-top: 7vw;
+                    font-size: 25vw;
+                }
+                .btn {
+                    margin-top: 4vw;
+                    font-size: 4.5vw;
+                    border-radius: 9px;
+                    padding: 1.5vw;
+                    border: 0.5vw solid $hover;
+                }
+            }
+        }
+    }
+}
+
+@include smallest {
+    .downloads {    
+        background-image: linear-gradient(to top, #2D4263, #1A2436);
+        height: 150vw;
+        margin-top: 30vw;
+        // outline: 1px solid white; 
+        .invite {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top: 0;
+            text-align: center;
+            .text {
+                padding-top: 5vw;
+                // outline: 1px solid white;  
+                font-size: 7.5vw;
+            }
+            .svg {
+                margin-top: 5vw;
+                font-size: 35vw;
+            }
+            .btn {
+                margin-top: 5vw;
+                font-size: 6vw;
+                border-radius: 9px;
+                padding: 1.5vw;
+                border: 0.5vw solid $hover;
+            }
+        }
+        .plugins {
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin-top: 10vw;
+            height: 140vw;
+            width: 100%;
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+            background-image: linear-gradient(to bottom, #3D2B4D, #446546);
+            .text {
+                padding-top: 5vw;
+                // outline: 1px solid white;  
+                font-size: 7.5vw;
+                margin-left: 0;
+            }
+            .berp {
+                display: block;
+                top: 0;
+                margin-left: 0;
+                .svg {
+                    margin-top: 5vw;
+                    font-size: 35vw;
+                    //outline: 1px solid white; //svg has extra space on top | couldn't figure out how to remove
+                }
+                .btn {
+                    margin-top: 5vw;
+                    font-size: 6vw;
+                    border-radius: 9px;
+                    padding: 1.5vw;
+                    border: 0.5vw solid $hover;
+                }
+            }
+            .bdsx {
+                display: block;
+                top: 0;
+                margin-left: 0;
+                .svg {
+                    margin-top: 8vw;
+                    font-size: 35vw;
+                }
+                .btn {
+                    margin-top: 5vw;
+                    font-size: 6vw;
+                    border-radius: 9px;
+                    padding: 1.5vw;
+                    border: 0.5vw solid $hover;
+                }
+            }
+        }
     }
 }

@@ -1,17 +1,18 @@
 export const navButtons = [
     {
         title: 'Home',
-        url: '/',
-        cName: ''
+        url: '/'
     },
     {
         title: 'Downloads',
-        url: '/',
-        cName: ''
+        url: '/'
     },
     {
         title: 'Documentation',
-        url: '/',
-        cName: ''
+        url: '/'
+    },
+    {
+        title: 'UnitedDB Discord',
+        url: '/'
     },
 ]

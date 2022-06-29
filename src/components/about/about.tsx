@@ -14,7 +14,7 @@ function about() {
                                 <div className='card'>
                                     <h2>{item.title}</h2>
                                     <h3>{item.description}</h3>
-                                    {item.icon}
+                                    <div className='svg'>{item.icon}</div>
                                 </div>
                             )
                         })}

@@ -1,131 +1,326 @@
 @import "../../scss/Variables.module.scss";
-
+@import '../../scss/breakpoints.scss';
 @mixin btnStyles() {
     position: relative;
     display: inline-block;
-    margin-right: 55px;
-    font-size: 35px;
     font-weight: 500;
     border-radius: 9px;
-    padding: 12px;
-    border: 3px solid $hover;
+    border: 1vw solid $hover;
     a {
         color: white;
     }
 }
 
-$margin: 170px;
+// $margin: 170px;
 
 
 .hero {
-    min-width: 2500px;
-    
-    .text {
-        // margin-top: 275px;
-        margin-top: 26.5vh;
-
-        margin-left: 150px;
-        display: inline-block;
-        h1 {
-            font-size: 60px;
-            color: $primaryColor;
-            font-weight: 600;
-            // white-space:inherit;
-            // border: 1px solid white;
-        }
-        h2 {
-            margin-top: 14px;
-            font-size: 40px;
-            width: 600px;
-            color: white;
-            font-weight: 600;
-            // border: 1px solid white;
-        }
-        h3 {
-            margin-top: 12px;
-            font-size: 25px;
-            font-weight: 600;
-            color: #8B8B8B;
-            width: 500px;
-            // border: 1px solid white;
-        }
-    
-        .btns {
-            margin-top: 38px;
-            .downloadBtn {
-                @include btnStyles();
-                background-color: $primaryColor;
+    position: relative;
+    display: block;
+    // margin-bottom: 10vh;
+    // outline: 1px solid yellow;
+    .hero2 {
+        display: inline-block; // make a row for hero2 and analytics
+        .hero3 {
+            position: relative;
+            display: block;
+            // outline: 1px solid red;
+            h1 {
+                color: $primaryColor;
+                font-weight: 600;
+                // outline: 1px solid white;
             }
-            
-            .docBtn {
-                @include btnStyles();
-                background-color: $black1;
-            }  
+            h2 {
+                color: white;
+                font-weight: 600;
+                // outline: 1px solid white;
+
+            }
+            h3 {
+                font-weight: 600;
+                color: #8B8B8B;
+                // outline: 1px solid white;
+            }
+            .btns {
+                .downloadBtn {
+                    @include btnStyles();
+                    background-color: $primaryColor;
+                    border: 4px solid $hover;
+                }
+                .docBtn {
+                    @include btnStyles();
+                    background-color: $black1;
+                    border: 4px solid $hover;
+                }
+            }
         }
-        // outline: 1px solid white;
     }
+    .analytics {
+        // outline: 1px solid red;
+        display: inline-block; // make a row for hero2 and analytics
+        position: absolute;
+        .mod {
+            .modText {
+                color: $primaryColor;
+            }
+            .modCount {
+                color: $primaryColor;
+            }
+        }
+        .bp {
+            .bpText {
+                color: $primaryColor;
+            }
+            .bpCount {
+                color: $primaryColor;
+            }
+        }
+    }
+}
 
-    .svg {
-        display: inline-block;
-        position: relative;
-        top: -10px;
-        margin-left: $margin;
-        font-size: 450px;
-        line-height: 0%; //removes passing from icon
-        // outline: 1px solid white;
-    }
+@include biggest {
+    .hero {
+        margin: 0 6.5vw;
+        padding-top: 13.5vw; // can't uee margin since it mess up navbar
+        margin-right: 0;
+        .hero2 {
+            // margin-top: 26.5vh; // can't uee margin since it mess up navbar
+            // margin-top: 10vw; // can't uee margin since it mess up navbar
+            // margin-left: 140px;
+            .hero3 {
+                position: relative;
 
-    .modText {
-        display: inline-block;
-        position: relative;
-        left: -405px;
-        bottom: -65px;
-        font-size: 45px;
-        color: $primaryColor;
-        font-weight: 600;
-        // outline: 1px solid white;
-    }
-    .modCount {
-        display: inline-block;
-        position: relative;
-        left: -590px;
-        bottom: -125px;
-        font-size: 45px;
-        color: $primaryColor;
-        font-weight: 600;
-        // outline: 1px solid white;
-    }
+                text-align: left;
+                h1 {
+                    font-size: 60px;
+                }
+                h2 {
+                    font-size: 40px;
+                    margin-top: 5px;
+                    width: 575px;
 
-    .svg2 {
-        display: inline-block;
-        position: relative;
-        top: -10px;
-        margin-left: $margin;
-        left: -410px;
-        font-size: 450px;
-        line-height: 0%; //removes passing from icon
-        // outline: 1px solid white;
+                }
+                h3 {
+                    font-size: 25px;
+                    margin-top: 5px;
+                    // margin: auto;
+                    width: 480px;
+                }
+                .btns {
+                    margin-top: 35px;
+    
+                    .downloadBtn {
+                        margin-right: 30px;
+                        font-size: 35px;
+                        padding: 10px;
+                    }
+                    .docBtn {
+                        font-size: 35px;
+                        padding: 10px;
+                    }  
+                }
+            }
+        }
+        .analytics { 
+            // display: inline-block; // make a row for hero2 and analytics
+            // position: absolute;
+            // width: fit-content;
+            // left: 50vw;
+            // top: -200px;
+            // margin-left: 2vw;
+            // left: 675px;
+            margin-left: 7vw;
+            bottom: -10%;
+                .mod {
+                    text-align: center;
+                    display: inline-block;
+                    font-weight: 600;
+                    .svg {
+                        font-size: 20vw;
+                        line-height: 0%; //removes passing from icon
+                    }
+                    .modText {
+                        font-size: 2.3vw;
+                    }
+                    .modCount {
+                        font-size: 2.3vw;
+                    }
+                }
+                .bp {
+                    margin-left: 5vw;
+                    display: inline-block;
+                    text-align: center;
+                    font-weight: 600;
+                    
+                    .svg2 {
+                        font-size: 20vw;
+                        line-height: 0%; //removes passing from icon
+                    }
+                    .bpText {
+                        font-size: 2.3vw;
+                    }
+                    .bpCount {
+                        font-size: 2.3vw;
+                    }
+                }
+                // display: none;
+            }
     }
+}
 
-    .bpText {
-        display: inline-block;
-        position: relative;
-        right: -1575px;
-        top: -8px;
-        font-size: 45px;
-        color: $primaryColor;
-        font-weight: 600;
-        // outline: 1px solid white;
+@media (max-width: 1650px) {
+    .hero {
+        .analytics {
+            .mod {
+                text-align: center;
+                display: inline-block;
+                font-weight: 600;
+                .svg {
+                    font-size: 300px;
+                }
+                .modText {
+                    font-size: 35px;
+                }
+                .modCount {
+                    font-size: 35px;
+                }
+            }
+            .bp {
+                display: none;
+            }
+        }
     }
-    .bpCount {
-        display: inline-block;
-        position: relative;
-        right: -1335px;
-        bottom: -55px;
-        font-size: 45px;
-        color: $primaryColor;
-        font-weight: 600;
-        // outline: 1px solid white;
+}
+
+
+@media (max-width: 1200px) {
+    .hero {
+        .analytics { 
+            // display: inline-block; // make a row for hero2 and analytics
+            // position: absolute;
+            // margin-left: 9vw;
+            // bottom: -7%;
+            margin-left: 6vw;
+            bottom: -7%;
+            // display: none;
+    
+            .mod {
+                text-align: center;
+                display: inline-block;
+                font-weight: 600;
+                .svg {
+                    font-size: 25vw;
+                    line-height: 0%; //removes passing from icon
+                }
+                .modText {
+                    font-size: 3vw;
+                }
+                .modCount {
+                    font-size: 3vw;
+                }
+            }
+            .bp {
+                display: none;
+            }
+            // display: none;
+        }
     }
-    // outline: 1px solid white;
+}
+
+@media (max-width: 1050px) {
+    .hero {
+        .analytics { 
+            display: none;
+        }
+    }
+}
+
+@include md {
+    .hero {
+        padding-top: 60px;
+        margin: 0;
+        .hero2 {
+            margin: 0;
+
+            .hero3 {
+                position: relative;
+                margin: 5vw 8vw;
+
+                text-align: left;
+                h1 {
+                    font-size: 7.5vw;
+                }
+                h2 {
+                    font-size: 5vw;
+                    margin-top: 10px;
+                    width: auto;
+
+                }
+                h3 {
+                    font-size: 3.5vw;
+                    margin-top: 5px;
+                    // margin: auto;
+                    width: 65vw;
+                }
+                .btns {
+                    margin-top: 4vw;
+    
+                    .downloadBtn {
+                        margin-right: 3vw;
+                        font-size: 5vw;
+                        padding: 1.5vw;
+                    }
+                    .docBtn {
+                        font-size: 5vw;
+                        padding: 1.5vw;
+                    }  
+                }
+            }
+        }
+        .analytics { 
+            display: none;
+        }
+    }
+}
+
+@include smallest {
+    .hero {
+        padding-top: 60px;
+        .hero2 {
+            margin: 0;
+
+            .hero3 {
+                margin: 5vw;
+                text-align: center;
+                h1 {
+                    font-size: 8vw;
+                }
+                h2 {
+                    font-size: 6vw;
+                }
+                h3 {
+                    font-size: 5vw;
+                    margin: auto;
+                }
+                .btns {
+                    margin-top: 4vw;
+    
+                    .downloadBtn {
+                        @include btnStyles();
+                        margin-right: 3vw;
+                        font-size: 5.5vw;
+                        padding: 1.5vw;
+                    }
+                    .docBtn {
+                        @include btnStyles();
+                        font-size: 5.5vw;
+                        padding: 1.5vw;
+                    }  
+                }
+            }
+        }
+        .analytics { 
+            display: none;
+        }
+    }
 }

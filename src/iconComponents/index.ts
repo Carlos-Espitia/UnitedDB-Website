@@ -1,2 +1,2 @@
-export { default as Database2 } from "./Database2";
-export { default as Discord } from "./Discord";
+export { default as Icon } from "./bdsx";
+export { default as PackIcon } from "./berp";

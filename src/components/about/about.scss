@@ -1,48 +1,302 @@
 @import "../../scss/Variables.module.scss";
-
+@import '../../scss/breakpoints.scss';
 
 .about {
-
-    margin-top: 25vh;
     h1 {
         font-weight: 500;
         color: white;
         text-align: center;
     }
-    
-    .wrapper { //added warpper to center grid container 
+    .wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
+
         .cards {
+            // outline: 1px solid white;
             display: inline-grid;
-            grid-template-columns: repeat(3, auto); /* num of grids */
-            grid-gap: 100px;
-            margin-top: 100px;
-            // margin-bottom: 150px;
             filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.4));
-    
+
             .card {
-                // display: block;
-                border-top: 5px solid $primaryColor;
-                padding-top: 30px;
-                padding-right: 34px;
-                padding-left: 34px;
-                padding-bottom: 43px;
                 background-color: $black1;
-                max-width: 400px;
                 h2 {
                     color: $primaryColor;
-                    font-size: 40px;
                     font-weight: 500;
-                    margin-bottom: 20px;
                 }
                 h3 {
-                    font-size: 25px;
                     color: $accent;
                     font-weight: 500;
                 }
-                // outline: 1px solid white;
+                .svg {
+                    position: relative;
+                    float: right;
+                    fill: $primaryColor;
+                }
+            }
+        }
+    }
+}
+
+@include biggest {
+    .about {
+        margin-top: 35vh;
+        h1 {
+            font-size: 45px;
+        }
+        .wrapper { //added warpper to center grid container 
+            .cards {
+                grid-template-columns: repeat(3, auto); /* num of grids */
+                // grid-gap: 4vw;
+                grid-gap: 75px;
+                margin-top: 80px;
+                // margin-bottom: 150px;
+        
+                .card {
+                    // outline: 1px solid white;
+    
+                    // display: block;
+                    border-top: 5px solid $primaryColor;
+                    padding-top: 20px;
+                    padding-right: 30px;
+                    padding-left: 30px;
+                    max-width: 400px;
+                    h2 {
+                        font-size: 40px;
+                        margin-bottom: 0.7vw;
+                    }
+                    h3 {
+                        font-size: 25px;
+                    }
+                    .svg {
+                        right: 1vw;
+                        font-size: 3rem;
+                        padding-top: 5px;
+                        padding-bottom: 10px;
+                        // right: 10px;
+                    }
+                    // outline: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .about {
+        margin-top: 30vh;
+        h1 {
+            font-size: 4.5vw;
+        }
+        .wrapper { //added warpper to center grid container 
+            .cards {
+                grid-template-columns: repeat(3, auto); /* num of grids */
+                grid-gap: 3vw;
+                margin-top: 4vw;
+                // margin-bottom: 150px;
+        
+                .card {
+                    // outline: 1px solid white;
+    
+                    // display: block;
+                    border-top: 0.5vw solid $primaryColor;
+                    padding-top: 2vw;
+                    padding-right: 2.5vw;
+                    padding-left: 2.5vw;
+                    max-width: 29.5vw;
+                    h2 {
+                        font-size: 3vw;
+                        margin-bottom: 1vw;
+                    }
+                    h3 {
+                        font-size: 2vw;
+                    }
+                    .svg {
+
+                        right: 1vw;
+                        font-size: 5vw;
+                        padding-top: 2vw;
+                        padding-bottom: 1vw;
+                        // right: 10px;
+                    }
+                    // outline: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .about {
+        margin-top: 20vh;
+        h1 {
+            font-size: 4.5vw;
+        }
+        .wrapper { //added warpper to center grid container 
+            .cards {
+                grid-template-columns: repeat(2, auto); /* num of grids */
+                grid-gap: 4vw;
+                margin-top: 4vw;
+                // margin-bottom: 150px;
+        
+                .card {
+                    // outline: 1px solid white;
+    
+                    // display: block;
+                    border-top: 0.8vw solid $primaryColor;
+                    padding-top: 3vw;
+                    padding-right: 3vw;
+                    padding-left: 3vw;
+                    max-width: 42vw;
+                    h2 {
+                        font-size: 4vw;
+                        margin-bottom: 1vw;
+                    }
+                    h3 {
+                        font-size: 2.5vw;
+                    }
+                    .svg {
+
+                        right: 1vw;
+                        font-size: 6.5vw;
+                        padding-top: 2vw;
+                        padding-bottom: 1vw;
+                        // right: 10px;
+                    }
+                    // outline: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .about {
+        margin-top: 20vh;
+        h1 {
+            font-size: 5vw;
+        }
+        .wrapper { //added warpper to center grid container 
+            .cards {
+                grid-template-columns: repeat(2, auto); /* num of grids */
+                grid-gap: 4vw;
+                margin-top: 4vw;
+                // margin-bottom: 150px;
+        
+                .card {
+                    // outline: 1px solid white;
+    
+                    // display: block;
+                    border-top: 0.8vw solid $primaryColor;
+                    padding-top: 3vw;
+                    padding-right: 3vw;
+                    padding-left: 3vw;
+                    max-width: 42vw;
+                    h2 {
+                        font-size: 4vw;
+                        margin-bottom: 1vw;
+                    }
+                    h3 {
+                        font-size: 2.5vw;
+                    }
+                    .svg {
+
+                        right: 1vw;
+                        font-size: 6.5vw;
+                        padding-top: 2vw;
+                        padding-bottom: 1vw;
+                        // right: 10px;
+                    }
+                    // outline: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+@include xmd {
+    .about {
+        margin-top: 15vh;
+        h1 {
+            font-size: 6vw;
+        }
+        .wrapper { //added warpper to center grid container 
+            .cards {
+                grid-template-columns: repeat(2, auto); /* num of grids */
+                grid-gap: 3.5vw;
+                margin-top: 6vw;
+                // margin-bottom: 150px;
+        
+                .card {
+                    // outline: 1px solid white;
+    
+                    // display: block;
+                    border-top: 0.8vw solid $primaryColor;
+                    padding-top: 3vw;
+                    padding-right: 3vw;
+                    padding-left: 3vw;
+                    max-width: 45vw;
+                    h2 {
+                        font-size: 4.3vw;
+                        margin-bottom: 1vw;
+                    }
+                    h3 {
+                        font-size: 3vw;
+                    }
+                    .svg {
+
+                        right: 1vw;
+                        font-size: 7vw;
+                        padding-top: 2vw;
+                        padding-bottom: 1vw;
+                        // right: 10px;
+                    }
+                    // outline: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
+    .about {
+        margin-top: 5vh;
+        h1 {
+            font-size: 6.5vw;
+        }
+        .wrapper { //added warpper to center grid container 
+            .cards {
+                grid-template-columns: repeat(1, auto); /* num of grids */
+                grid-gap: 5vw;
+                margin-top: 5vw;
+                // margin-bottom: 150px;
+        
+                .card {
+                    // outline: 1px solid white;
+    
+                    // display: block;
+                    border-top: 0.8vw solid $primaryColor;
+                    padding-top: 3vw;
+                    padding-right: 5vw;
+                    padding-left: 5vw;
+                    max-width: 70vw;
+                    h2 {
+                        font-size: 6vw;
+                        margin-bottom: 2vw;
+                    }
+                    h3 {
+                        font-size: 4.5vw;
+                    }
+                    .svg {
+
+                        right: 1vw;
+                        font-size: 10vw;
+                        padding-top: 2vw;
+                        padding-bottom: 2.5vw;
+                        // right: 10px;
+                    }
+                    // outline: 1px solid white;
+                }
             }
         }
     }
