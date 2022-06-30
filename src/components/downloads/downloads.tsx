@@ -8,16 +8,14 @@ import SvgBerp from '../../iconComponents/berp';
 
 
 
-
 function downloads() {
     return(
-        <div className='downloads'>
-
+        <div className='downloads' id='downloads'>
             <div className='invite'>
                 <div className='text'>Invite United<label style={{ color: variables.primaryColor }}>DB</label> Discord Bot</div>
                 <div className='svg'><SvgDiscord/></div>
                 <li className='btn'>
-                    <a href="/">Invite</a>
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=958167252652421230&permissions=8&scope=bot%20applications.commands">Invite</a>
                 </li>
             </div>
             <div className='plugins'>

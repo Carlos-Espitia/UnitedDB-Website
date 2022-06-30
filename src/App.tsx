@@ -1,22 +1,30 @@
-import React from 'react';
+// import React from 'react';
 import './App.scss';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
 import Navbar from './components/navbar/navbar';
-import Hero from './components/hero/hero';
-import About from './components/about/about';
-import Downloads from './components/downloads/downloads';
-
-
+import Home from './pages/home';
+import Docs from './pages/docs';
 
 
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar/>
-      <Hero/>
-      <About/>
-      <Downloads/>
-    </div>
+      <main id="App">
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/documentation" element={<Docs/>}/>
+
+          {/* <Route path='*' element={<Home/>}/> // 404 page not found  */}
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 
