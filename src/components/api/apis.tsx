@@ -1,7 +1,7 @@
-import { DB_API } from '../../App';
+
+const DB_API = 'https://mcbe-playerbans.herokuapp.com'
 
 //http://localhost:5000
-
 export const apis = [
     {
         description: 'Get data of a database banned player.',
