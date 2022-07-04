@@ -3,6 +3,7 @@ $primaryColor: #6AA1FF;
 $accent: #A2C5FF;
 $black1: #242424;
 $black2: #1A1A1A;
+$black3: #292929;
 $hover: #2D2D2D;
 
 :export {
@@ -11,5 +12,6 @@ $hover: #2D2D2D;
     accent: $accent;
     black1: $black1;
     black2: $black2;
+    black3: $black3;
     hover: $hover;
 }

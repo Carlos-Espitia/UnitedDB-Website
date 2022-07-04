@@ -15,7 +15,7 @@ function downloads() {
                 <div className='text'>Invite United<label style={{ color: variables.primaryColor }}>DB</label> Discord Bot</div>
                 <div className='svg'><SvgDiscord/></div>
                 <li className='btn'>
-                    <a href="https://discord.com/api/oauth2/authorize?client_id=958167252652421230&permissions=8&scope=bot%20applications.commands">Invite</a>
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=958167252652421230&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noreferrer">Invite</a>
                 </li>
             </div>
             <div className='plugins'>
@@ -23,7 +23,7 @@ function downloads() {
                 <div className='berp'>
                 <div className='svg'><SvgBerp/></div>
                     <li className='btn'>
-                        <a href="/">Berp Download</a>
+                        <a href="https://github.com/Carlos-Espitia/Berp-GlobalBanDB/archive/refs/heads/master.zip">Berp Download</a>
                     </li>
                 </div>
                 <div className='bdsx'>

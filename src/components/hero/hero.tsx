@@ -7,8 +7,11 @@ import axios from "axios";
 import React, { useState, useEffect } from 'react'
 //
 function Hero() {
+
     const DB_API = 'http://localhost:5000'
+
     const [playerBans, setPlayerBans] = useState<number | string >('Loading...')
+
     useEffect(() => {
         axios.get(`${DB_API}/BannedPlayers`, {
                 headers: {
@@ -36,7 +39,7 @@ function Hero() {
                             <Link to='downloads' smooth={ true } style={{ cursor: 'pointer' }}>Download</Link>
                         </li>
                         <li className='docBtn'>
-                            <a href="/documentation">Documentation</a>
+                            <a href="/documentation/api">Documentation</a>
                         </li>
                     </div>
                 </div>

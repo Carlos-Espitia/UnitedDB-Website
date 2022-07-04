@@ -29,7 +29,7 @@ function Navbar() {
                         )
                     } else {
                         return (
-                            <li><a href={item.url}>{item.title}</a></li>
+                            <li><a href={item.url} target={item.target}>{item.title}</a></li>
                         )
                     }
                 })}

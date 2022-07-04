@@ -8,7 +8,9 @@ import {
 
 import Navbar from './components/navbar/navbar';
 import Home from './pages/home';
-import Docs from './pages/docs';
+import Docsapi from './pages/docsapi';
+import Docsdbsx from './pages/docsbdsx';
+import Docsberp from './pages/docsberp';
 
 
 
@@ -19,7 +21,10 @@ function App() {
       <main id="App">
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/documentation" element={<Docs/>}/>
+          <Route path="/documentation/api" element={<Docsapi/>}/>
+          <Route path="/documentation/berp" element={<Docsberp/>}/>
+          <Route path="/documentation/bdsx" element={<Docsdbsx/>}/>
+
 
           {/* <Route path='*' element={<Home/>}/> // 404 page not found  */}
         </Routes>

@@ -16,7 +16,7 @@ export const cards = [
         icon: <SearchIcon/>
     },
     {
-        title: 'Flexibilty',
+        title: 'Flexibility',
         description: 'Our MCBE plugins and api provide many options to deal with banned players',
         icon: <SettingsIcon/>
     },
@@ -26,13 +26,13 @@ export const cards = [
         icon: <BanIcon/>
     },
     {
-        title: '',
-        description: '',
-        icon: ''
+        title: 'Automod',
+        description: 'Berp plugin includes an option for filtering players and slow down hackers.',
+        icon: <SettingsIcon/>
     },
     {
-        title: '',
-        description: '',
-        icon: ''
+        title: 'IP Bans',
+        description: 'IP bans will be a future feature for Berp and BDSX',
+        icon: <SettingsIcon/>
     },
 ]
