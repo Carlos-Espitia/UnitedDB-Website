@@ -1,5 +1,6 @@
+import { DB_API } from '../../App';
 
-const DB_API = 'http://localhost:5000'
+//http://localhost:5000
 
 export const apis = [
     {

@@ -5,10 +5,9 @@ import SvgDatabase2 from '../../iconComponents/Database2';
 import { Link } from 'react-scroll';
 import axios from "axios";
 import React, { useState, useEffect } from 'react'
+import { DB_API } from '../../App';
 //
 function Hero() {
-
-    const DB_API = 'http://localhost:5000'
 
     const [playerBans, setPlayerBans] = useState<number | string >('Loading...')
 

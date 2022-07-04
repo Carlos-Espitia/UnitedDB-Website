@@ -12,7 +12,7 @@ import Docsapi from './pages/docsapi';
 import Docsdbsx from './pages/docsbdsx';
 import Docsberp from './pages/docsberp';
 
-
+export const DB_API = 'https://mcbe-playerbans.herokuapp.com'
 
 function App() {
   return (
