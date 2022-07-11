@@ -1,5 +1,5 @@
 
-const DB_API = 'https://mcbe-playerbans.herokuapp.com'
+const DB_API = 'http://51.195.220.69:22222'
 
 //http://localhost:5000
 export const apis = [
