@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react'
 //
 function Hero() {
 
-    const DB_API = 'https://mcbe-playerbans.herokuapp.com'
+    const DB_API = 'http://51.195.220.69:22222'
 
     const [playerBans, setPlayerBans] = useState<number | string >('Loading...')
 
